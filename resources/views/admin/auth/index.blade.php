@@ -10,8 +10,9 @@
             <p class="login-box-msg">This page only for admins</p>
             <form action="{{ route('admin.login')}}" method="post">
                 @csrf
+                @include('admin.layouts.partials.messages')
                 <div class="input-group mb-3">
-                    @include('admin.layouts.partials.messages')
+                    
                     <input type="text" id="username" name="username"  class="form-control"  placeholder="Username / Email" value="{{ old('username') }}" required="required" autofocus >
                     @if ($errors->has('username'))
                         <span class="text-danger text-left">{{ $errors->first('username') }}</span>
