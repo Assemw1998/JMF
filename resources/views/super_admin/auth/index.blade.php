@@ -1,16 +1,16 @@
-@extends('admin.layouts.login')
+@extends('super_admin.layouts.login')
 @section('content')
 <div class="login-box">
     <div class="login-logo">
-        <a href="#"><b>Admin</b> Side</a>
+        <a href="#"><b>Super Admin</b> Side</a>
     </div>
 
     <div class="card">
         <div class="card-body login-card-body">
-            <p class="login-box-msg">This page only for super admins</p>
-            <form action="{{ route('admin.login')}}" method="post">
+            <p class="login-box-msg">This page only for super admin</p>
+            <form action="{{ route('super-admin.login')}}" method="post">
                 @csrf
-                @include('admin.layouts.partials.messages')
+                @include('super_admin.layouts.partials.messages')
                 <div class="input-group mb-3">
                     
                     <input type="text" id="username" name="username"  class="form-control"  placeholder="Username / Email" value="{{ old('username') }}" required="required" autofocus >
@@ -41,7 +41,7 @@
                 </div>
             </form>
         </div>
-        @include('admin.layouts.partials.copy')
+        @include('super_admin.layouts.partials.copy')
     </div>
 </div>
 
