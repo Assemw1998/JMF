@@ -48,7 +48,7 @@
                     </ul>
                 </li> -->
                 <li class="nav-item">
-                    <a href="pages/widgets.html" class="nav-link">
+                    <a href="{{ route('super-admin.dashboard.motorcycles-index')}}" class="nav-link">
                         <i class="nav-icon fa fa-motorcycle"></i>
                         <p>
                             Motorcycles 

@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\super_admin;
+namespace App\Http\Controllers\super_admin\dashboard;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class SuperAdminDashboardController extends Controller
+class MainController extends Controller
 {
     public function index()
     {

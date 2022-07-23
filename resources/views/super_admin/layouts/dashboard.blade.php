@@ -33,6 +33,60 @@
     <link rel="stylesheet" href={{ asset("libraries/daterangepicker/daterangepicker.css") }} />
     <!-- summernote -->
     <link rel="stylesheet" href={{ asset("libraries/summernote/summernote-bs4.min.css") }} />
+    <!--datatable-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+
+    <!-- jQuery -->
+    <script src={{ asset("libraries/jquery/jquery.min.js") }} />
+    </script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src={{ asset("libraries/jquery-ui/jquery-ui.min.js") }} />
+    </script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+        $.widget.bridge('uibutton', $.ui.button)
+    </script>
+    <!-- Bootstrap 4 -->
+    <script src={{ asset("libraries/bootstrap/js/bootstrap.bundle.min.js") }} />
+    </script>
+    <!-- ChartJS -->
+    <script src={{ asset("libraries/chart.js/Chart.min.js") }} />
+    </script>
+    <!-- Sparkline -->
+    <script src={{ asset("libraries/sparklines/sparkline.js") }} />
+    </script>
+    <!-- JQVMap -->
+    <script src={{ asset("libraries/jqvmap/jquery.vmap.min.js") }} />
+    </script>
+    <script src={{ asset("libraries/jqvmap/maps/jquery.vmap.usa.js") }} />
+    </script>
+    <!-- jQuery Knob Chart -->
+    <script src={{ asset("libraries/jquery-knob/jquery.knob.min.js") }} />
+    </script>
+    <!-- daterangepicker -->
+    <script src={{ asset("libraries/moment/moment.min.js") }} />
+    </script>
+    <script src={{ asset("libraries/daterangepicker/daterangepicker.js") }} />
+    </script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src={{ asset("libraries/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js") }} />
+    </script>
+    <!-- Summernote -->
+    <script src={{ asset("libraries/summernote/summernote-bs4.min.js") }} />
+    </script>
+    <!-- overlayScrollbars -->
+    <script src={{ asset("libraries/overlayScrollbars/js/jquery.overlayScrollbars.min.js") }} />
+    </script>
+    <!-- AdminLTE App -->
+    <script src={{ asset("custom/admin/js/adminlte.js") }} />
+    </script>
+    <!-- AdminLTE for demo purposes -->
+    <script src={{ asset("custom/admin/js/demo.js") }} />
+    </script>
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <script src={{ asset("custom/admin/js/pages/dashboard.js") }} /></script>
+    <!--datatable-->
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -40,45 +94,11 @@
         @include('super_admin.layouts.components.header')
 
         @include('super_admin.layouts.components.sidebar')
-        
+
         @yield('content')
-        
+
         @include('super_admin.layouts.components.footer')
     </div>
-    <!-- jQuery -->
-    <script src={{ asset("libraries/jquery/jquery.min.js") }} /></script>
-    <!-- jQuery UI 1.11.4 -->
-    <script src={{ asset("libraries/jquery-ui/jquery-ui.min.js") }} /></script>
-    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-    <script>
-        $.widget.bridge('uibutton', $.ui.button)
-    </script>
-    <!-- Bootstrap 4 -->
-    <script src={{ asset("libraries/bootstrap/js/bootstrap.bundle.min.js") }} /></script>
-    <!-- ChartJS -->
-    <script src={{ asset("libraries/chart.js/Chart.min.js") }} /></script>
-    <!-- Sparkline -->
-    <script src={{ asset("libraries/sparklines/sparkline.js") }} /></script>
-    <!-- JQVMap -->
-    <script src={{ asset("libraries/jqvmap/jquery.vmap.min.js") }} /></script>
-    <script src={{ asset("libraries/jqvmap/maps/jquery.vmap.usa.js") }} /></script>
-    <!-- jQuery Knob Chart -->
-    <script src={{ asset("libraries/jquery-knob/jquery.knob.min.js") }} /></script>
-    <!-- daterangepicker -->
-    <script src={{ asset("libraries/moment/moment.min.js") }} /></script>
-    <script src={{ asset("libraries/daterangepicker/daterangepicker.js") }} /></script>
-    <!-- Tempusdominus Bootstrap 4 -->
-    <script src={{ asset("libraries/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js") }} /></script>
-    <!-- Summernote -->
-    <script src={{ asset("libraries/summernote/summernote-bs4.min.js") }} /></script>
-    <!-- overlayScrollbars -->
-    <script src={{ asset("libraries/overlayScrollbars/js/jquery.overlayScrollbars.min.js") }} /></script>
-    <!-- AdminLTE App -->
-    <script src={{ asset("custom/admin/js/adminlte.js") }} /></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src={{ asset("custom/admin/js/demo.js") }} /></script>
-    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src={{ asset("custom/admin/js/pages/dashboard.js") }} /></script>
 </body>
 
 </html>

@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\super_admin;
+namespace App\Http\Controllers\super_admin\auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\SuperAdminLoginRequest;
 use Illuminate\Support\Facades\Auth;
 
-class SuperAdminLoginController extends Controller
+class LoginController extends Controller
 {
     public function index()
     {
