@@ -15,8 +15,15 @@ Route::group(['namespace' => 'App\Http\Controllers\super_admin','as'=>'super-adm
 
     Route::group(['middleware' => ['auth:super_admin'],'as'=>'dashboard.','prefix'=>'dashboard'], function() {
         Route::get('index', 'dashboard\MainController@index')->name('index');
+        //motorcycles
         Route::get('motorcycles-index', 'dashboard\MotorcyclesController@index')->name('motorcycles-index');
-        
+        Route::get('motorcycles-create-view', 'dashboard\MotorcyclesController@viewCreate')->name('motorcycles-create-view');
+        Route::post('motorcycles-create', 'dashboard\MotorcyclesController@create')->name('motorcycles-create');
+        Route::get('motorcycles-view/{id}', 'dashboard\MotorcyclesController@view')->name('motorcycles-view');
+        Route::get('motorcycles-update-view/{id}', 'dashboard\MotorcyclesController@viewUpdate')->name('motorcycles-update-view');
+        Route::post('motorcycles-delete-image', 'dashboard\MotorcyclesController@deleteImage')->name('motorcycles-delete-image');
+        Route::post('motorcycles-update/{id}', 'dashboard\MotorcyclesController@update')->name('motorcycles-update');
+        Route::post('motorcycles-delete', 'dashboard\MotorcyclesController@delete')->name('motorcycles-delete');
     });
 
 });
