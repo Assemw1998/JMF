@@ -10,7 +10,7 @@
                     <h1 class="m-0 text-capitalize">{{ Request::segment(3) }} #{{$motorcycle->id}}</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6 text-right">
-                   <a href="{{ route('super-admin.dashboard.motorcycles-index')}}">Motorcycle</a>
+                    <a href="{{ route('super-admin.dashboard.motorcycles-index')}}">Motorcycle</a>
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -18,87 +18,87 @@
     <!-- /.content-header -->
     <section class="mt-3 content text-dark center">
         <div class="col-6 p-0 mb-2">
-        <a class="btn btn-outline-success  update" href="{{ route('super-admin.dashboard.motorcycles-update-view',['id' => $motorcycle->id])}}" data-id="">Update</a>
-        <a class="btn btn-outline-danger delete delete" data-id="{{$motorcycle->id}}">Delete</a>
+            <a class="btn btn-outline-success  update" href="{{ route('super-admin.dashboard.motorcycles-update-view',['id' => $motorcycle->id])}}" data-id="">Update</a>
+            <a class="btn btn-outline-danger delete delete" data-id="{{$motorcycle->id}}">Delete</a>
         </div>
         <ul class="list-group list-group-flush">
             <li class="list-group-item">
                 <div class="form-group">
-                    <label for="make">Make</label>
+                    <label>Make</label>
                     <div>{{$motorcycle->make->name}}</div>
                 </div>
             </li>
             <li class="list-group-item">
                 <div class="form-group">
-                    <label for="make">Model</label>
+                    <label>Model</label>
                     <div>{{$motorcycle->model->name}}</div>
                 </div>
             </li>
             <li class="list-group-item">
                 <div class="form-group">
-                    <label for="make">Chassis</label>
+                    <label>Chassis</label>
                     <div>{{$motorcycle->chassis}}</div>
                 </div>
             </li>
             <li class="list-group-item">
                 <div class="form-group">
-                    <label for="make">Year</label>
+                    <label>Year</label>
                     <div>{{$motorcycle->year}}</div>
                 </div>
             </li>
             <li class="list-group-item">
                 <div class="form-group">
-                    <label for="make">Cylinder</label>
+                    <label>Cylinder</label>
                     <div>{{$motorcycle->cylinder->name}}</div>
                 </div>
             </li>
             <li class="list-group-item">
                 <div class="form-group">
-                    <label for="make">Engine Serial Number</label>
+                    <label>Engine Serial Number</label>
                     <div>{{$motorcycle->engine_serial_number}}</div>
                 </div>
             </li>
             <li class="list-group-item">
                 <div class="form-group">
-                    <label for="make">Color</label>
+                    <label>Color</label>
                     <div>{{$motorcycle->color->name}}</div>
                 </div>
             </li>
             <li class="list-group-item">
                 <div class="form-group">
-                    <label for="make">Extra Information</label>
+                    <label>Extra Information</label>
                     <div>{{$motorcycle->extra_information}}</div>
                 </div>
             </li>
             <li class="list-group-item">
                 <div class="form-group">
-                    <label for="make" class=" d-block">Images</label>
+                    <label class=" d-block">Images</label>
                     @foreach($motorcycle->motorcycleImage as $image)
-                        <img width='200' height='150' class='rounded p-2' src="{{ asset($image->url) }}">
+                    <img width='200' height='150' class='rounded p-2' src="{{ asset($image->url) }}">
                     @endforeach
                 </div>
             </li>
             <li class="list-group-item">
                 <div class="form-group">
-                    <label for="make">Created By</label>
+                    <label>Created By</label>
                     <div>{{$motorcycle->superAdminCreatedBy->full_name}}</div>
                 </div>
             </li>
             <li class="list-group-item">
                 <div class="form-group">
-                    <label for="make">Updated By</label>
+                    <label>Updated By</label>
                     <div>{{$motorcycle->superAdminUpdatedBy->full_name}}</div>
                 </div>
             </li>
             <li class="list-group-item">
                 <div class="form-group">
-                    <label for="make">Created At</label>
+                    <label>Created At</label>
                     <div>{{$motorcycle->created_at}}</div>
                 </div>
             </li>
             <li class="list-group-item">
                 <div class="form-group">
-                    <label for="make">Updated At</label>
+                    <label>Updated At</label>
                     <div>{{$motorcycle->updated_at}}</div>
                 </div>
             </li>

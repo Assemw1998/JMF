@@ -27,6 +27,15 @@ Route::group(['namespace' => 'App\Http\Controllers\super_admin','as'=>'super-adm
         Route::post('motorcycles-update/{id}', 'dashboard\MotorcyclesController@update')->name('motorcycles-update');
         Route::post('motorcycles-delete', 'dashboard\MotorcyclesController@delete')->name('motorcycles-delete');
         
+        //make
+        Route::get('make-index', 'dashboard\MakeController@index')->name('make-index');
+        Route::get('make-create-view', 'dashboard\MakeController@viewCreate')->name('make-create-view');
+        Route::post('make-create', 'dashboard\MakeController@create')->name('make-create');
+        Route::get('make-view/{id}', 'dashboard\MakeController@view')->name('make-view');
+        Route::get('make-update-view/{id}', 'dashboard\MakeController@viewUpdate')->name('make-update-view');
+        Route::post('make-update/{id}', 'dashboard\MakeController@update')->name('make-update');
+        Route::post('make-delete', 'dashboard\MakeController@delete')->name('make-delete');
+
         //model
         Route::get('model-index', 'dashboard\ModelController@index')->name('model-index');
         Route::get('model-create-view', 'dashboard\ModelController@viewCreate')->name('model-create-view');
@@ -35,6 +44,24 @@ Route::group(['namespace' => 'App\Http\Controllers\super_admin','as'=>'super-adm
         Route::get('model-update-view/{id}', 'dashboard\ModelController@viewUpdate')->name('model-update-view');
         Route::post('model-update/{id}', 'dashboard\ModelController@update')->name('model-update');
         Route::post('model-delete', 'dashboard\ModelController@delete')->name('model-delete');
+
+        //cylinder
+        Route::get('cylinder-index', 'dashboard\CylinderController@index')->name('cylinder-index');
+        Route::get('cylinder-create-view', 'dashboard\CylinderController@viewCreate')->name('cylinder-create-view');
+        Route::post('cylinder-create', 'dashboard\CylinderController@create')->name('cylinder-create');
+        Route::get('cylinder-view/{id}', 'dashboard\CylinderController@view')->name('cylinder-view');
+        Route::get('cylinder-update-view/{id}', 'dashboard\CylinderController@viewUpdate')->name('cylinder-update-view');
+        Route::post('cylinder-update/{id}', 'dashboard\CylinderController@update')->name('cylinder-update');
+        Route::post('cylinder-delete', 'dashboard\CylinderController@delete')->name('cylinder-delete');
+
+         //color
+         Route::get('color-index', 'dashboard\ColorController@index')->name('color-index');
+         Route::get('color-create-view', 'dashboard\ColorController@viewCreate')->name('color-create-view');
+         Route::post('color-create', 'dashboard\ColorController@create')->name('color-create');
+         Route::get('color-view/{id}', 'dashboard\ColorController@view')->name('color-view');
+         Route::get('color-update-view/{id}', 'dashboard\ColorController@viewUpdate')->name('color-update-view');
+         Route::post('color-update/{id}', 'dashboard\ColorController@update')->name('color-update');
+         Route::post('color-delete', 'dashboard\ColorController@delete')->name('color-delete');
     });
 
 });

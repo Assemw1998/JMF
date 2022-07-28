@@ -4,13 +4,8 @@ namespace App\Http\Controllers\super_admin\dashboard;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Motorcycle;
-use App\Models\Make;
 use App\Models\Model;
-use App\Models\Color;
-use App\Models\Cylinder;
-use App\Models\MotorcycleImage;
-use DB;
+
 
 class ModelController extends Controller
 {
@@ -40,8 +35,8 @@ class ModelController extends Controller
 
     public function view($id)
     {
-        $Model = Model::find($id);
-        return view('super_admin.dashboard.model.view', ['model' => $Model]);
+        $model = Model::find($id);
+        return view('super_admin.dashboard.model.view', ['model' => $model]);
     }
     public function viewUpdate($id)
     {

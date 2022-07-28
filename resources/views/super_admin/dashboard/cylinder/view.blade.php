@@ -7,10 +7,10 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0 text-capitalize">{{ Request::segment(3) }} #{{$model->id}}</h1>
+                    <h1 class="m-0 text-capitalize">{{ Request::segment(3) }} #{{$cylinder->id}}</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6 text-right">
-                    <a href="{{ route('super-admin.dashboard.model-index')}}">Model</a>
+                    <a href="{{ route('super-admin.dashboard.cylinder-index')}}">Cylinder</a>
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -18,42 +18,42 @@
     <!-- /.content-header -->
     <section class="mt-3 content text-dark center">
         <div class="col-6 p-0 mb-2">
-            <a class="btn btn-outline-success  update" href="{{ route('super-admin.dashboard.model-update-view',['id' => $model->id])}}" data-id="">Update</a>
-            <a class="btn btn-outline-danger delete delete" data-id="{{$model->id}}">Delete</a>
+            <a class="btn btn-outline-success  update" href="{{ route('super-admin.dashboard.cylinder-update-view',['id' => $cylinder->id])}}" data-id="">Update</a>
+            <a class="btn btn-outline-danger delete delete" data-id="{{$cylinder->id}}">Delete</a>
         </div>
         <ul class="list-group list-group-flush">
             <li class="list-group-item">
                 <div class="form-group">
-                    <label>Model Name</label>
-                    <div>{{$model->name}}</div>
+                    <label>Cylinder Name</label>
+                    <div>{{$cylinder->name}}</div>
                 </div>
             </li>
             <li class="list-group-item">
                 <div class="form-group">
                     <label>Created By</label>
-                    <div>{{$model->superAdminCreatedBy->full_name}}</div>
+                    <div>{{$cylinder->superAdminCreatedBy->full_name}}</div>
                 </div>
             </li>
             <li class="list-group-item">
                 <div class="form-group">
                     <label>Updated By</label>
-                    <div>{{$model->superAdminUpdatedBy->full_name}}</div>
+                    <div>{{$cylinder->superAdminUpdatedBy->full_name}}</div>
                 </div>
             </li>
             <li class="list-group-item">
                 <div class="form-group">
                     <label>Created At</label>
-                    <div>{{$model->created_at}}</div>
+                    <div>{{$cylinder->created_at}}</div>
                 </div>
             </li>
             <li class="list-group-item">
                 <div class="form-group">
                     <label>Updated At</label>
-                    <div>{{$model->updated_at}}</div>
+                    <div>{{$cylinder->updated_at}}</div>
                 </div>
             </li>
         </ul>
     </section>
 </div>
-<script type="text/javascript" src={{asset("custom/super_admin/js/model.js")}}></script>
+<script type="text/javascript" src={{asset("custom/super_admin/js/cylinder.js")}}></script>
 @endsection

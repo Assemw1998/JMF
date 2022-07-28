@@ -37,9 +37,27 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
+                            <a href="{{ route('super-admin.dashboard.make-index')}}"  class="nav-link">
+                                <i class="far fa fa-ellipsis-h"></i>
+                                <p>Make</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="{{ route('super-admin.dashboard.model-index')}}"  class="nav-link">
-                                <i class="far fa fa-star"></i>
+                                <i class="far fa fa-ellipsis-h"></i>
                                 <p>Model</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('super-admin.dashboard.cylinder-index')}}"  class="nav-link">
+                                <i class="far fa fa-ellipsis-h"></i>
+                                <p>Cylinder</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('super-admin.dashboard.color-index')}}"  class="nav-link">
+                                <i class="far fa fa-ellipsis-h"></i>
+                                <p>Color</p>
                             </a>
                         </li>
                     </ul>
