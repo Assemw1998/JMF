@@ -60,7 +60,7 @@ class Motorcycle extends ModelLaravel
         });
 
         self::updating(function ($model) {
-            // ... code here
+            $model->updated_by_id = auth()->user()->id;
         });
 
         self::updated(function ($model) {

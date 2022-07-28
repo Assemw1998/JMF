@@ -18,35 +18,6 @@
         <!-- Sidebar Menu -->
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-            <!-- <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fa fa-users"></i>
-                        <p>
-                            All Users
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="" class="nav-link">
-                                <i class="far fa-solid fa-user"></i>
-                                <p>Users</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/charts/flot.html" class="nav-link">
-                                <i class="far fa-solid fa-user"></i>
-                                <p>Maintainers</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/charts/inline.html" class="nav-link">
-                                <i class="far fa-solid fa-user"></i>
-                                <p>Accountants</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li> -->
                 <li class="nav-item">
                     <a href="{{ route('super-admin.dashboard.motorcycles-index')}}" class="nav-link">
                         <i class="nav-icon fa fa-motorcycle"></i>
@@ -54,6 +25,24 @@
                             Motorcycles 
                         </p>
                     </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa fa-cog"></i>
+                        <p>
+                            Settings
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('super-admin.dashboard.model-index')}}"  class="nav-link">
+                                <i class="far fa fa-star"></i>
+                                <p>Model</p>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </nav>

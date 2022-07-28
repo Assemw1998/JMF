@@ -88,7 +88,7 @@ $(document).ready(function () {
         var motorcycle_id = $(this).attr('data-id');
         $.confirm({
             title: 'Motorcycle delete',
-            content: 'are you sure that you wnat to delete this motorcycle?',
+            content: 'Are you sure that you wnat to delete this motorcycle?',
             type: 'red',
             typeAnimated: true,
             buttons: {

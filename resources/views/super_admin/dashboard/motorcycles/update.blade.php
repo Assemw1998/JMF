@@ -66,7 +66,7 @@
                         @if(old("cylinder_id"))
                             <option value="{{$cylinder->id}}" {{ (old("cylinder_id") == $cylinder->id ? "selected":"") }}>{{$cylinder->name}}</option>
                         @else
-                            <option value="{{$model->id}}" {{ ( $motorcycle->cylinder_id == $cylinder->id ? "selected":"") }}>{{$cylinder->name}}</option>
+                            <option value="{{$cylinder->id}}" {{ ( $motorcycle->cylinder_id == $cylinder->id ? "selected":"") }}>{{$cylinder->name}}</option>
                         @endif
                     @endforeach
                 </select>
