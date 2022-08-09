@@ -24,6 +24,19 @@
                 <label for="name">Model Name</label>
                 <input type="text" class="form-control" value="{{(old('name')? old('name'): $model->name )}}" name="name" id="name" required>
             </div>
+            <div class="form-group">
+                <label for="brand_id">Brand Name</label>
+                <select class="form-control" name="brand_id" id="brand_id" required>
+                    <option value="">Select Brand</option>
+                    @foreach($brands as $brand)
+                        @if(old("brand_id"))
+                            <option value="{{$brand->id}}" {{ (old("brand_id") == $brand->id ? "selected":"") }}>{{$brand->name}}</option>
+                        @else
+                            <option value="{{$brand->id}}" {{ ( $model->brand_id == $brand->id ? "selected":"") }}>{{$brand->name}}</option>
+                        @endif
+                    @endforeach
+                </select>
+            </div>
             <div class="text-center mt-4">
                 <button type="submit" class="btn btn-success w-25">Update</button>
             </div>

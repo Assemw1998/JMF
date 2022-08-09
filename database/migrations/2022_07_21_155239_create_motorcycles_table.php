@@ -15,11 +15,11 @@ class CreateMotorcyclesTable extends Migration
     {
         Schema::create('motorcycles', function (Blueprint $table) {
             $table->id();
-            $table->integer('make_id');
+            $table->integer('brand_id');
             $table->integer('model_id');
             $table->string('chassis');
-            $table->date('year');
-            $table->integer('cylinder_id');
+            $table->string('year');
+            $table->integer('engine_type_id');
             $table->string('engine_serial_number');
             $table->integer('color_id');
             $table->string('extra_information');

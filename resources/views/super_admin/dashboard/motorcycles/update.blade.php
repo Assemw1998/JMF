@@ -21,21 +21,21 @@
         <form action="{{ route('super-admin.dashboard.motorcycles-update',['id'=>$motorcycle->id])}}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
-                <label for="make">Make</label>
-                <select class="form-control" name="make_id" id="make" required>
-                    <option value="">Select Make</option>
-                    @foreach($makes as $make)
-                        @if(old("make_id"))
-                            <option value="{{$make->id}}" {{ (old("make_id") == $make->id ? "selected":"") }}>{{$make->name}}</option>
+                <label for="brand_id">Brand</label>
+                <select class="form-control" name="brand_id" id="brand_id" required>
+                    <option value="">Select Brand</option>
+                    @foreach($brands as $brand)
+                        @if(old("brand_id"))
+                            <option value="{{$brand->id}}" {{ (old("brand_id") == $brand->id ? "selected":"") }}>{{$brand->name}}</option>
                         @else
-                            <option value="{{$make->id}}" {{ ( $motorcycle->make_id == $make->id ? "selected":"") }}>{{$make->name}}</option>
+                            <option value="{{$brand->id}}" {{ ( $motorcycle->brand_id == $brand->id ? "selected":"") }}>{{$brand->name}}</option>
                         @endif
                     @endforeach
                 </select>
             </div>
             <div class="form-group">
-                <label for="model">Model</label>
-                <select class="form-control" name="model_id" id="make" required>
+                <label for="model_id">Model</label>
+                <select class="form-control" name="model_id" id="model_id" required>
                     <option value="">Select Model</option>
                     @foreach($models as $model)
                         @if(old("model_id"))
@@ -48,7 +48,7 @@
             </div>
             <div class="form-group">
                 <label for="year">Year</label>
-                <input type="text" class="form-control" value="{{(old('model_id')? old('year'): $motorcycle->year )}}" name="year" id="year" required>
+                <input type="text" class="form-control" value="{{(old('year')? old('year'): $motorcycle->year )}}" name="year" id="year" required>
             </div>
             <div class="form-group">
                 <label for="chassis">Chassis</label>
@@ -59,14 +59,14 @@
             </div>
 
             <div class="form-group">
-                <label for="model">Cylinder</label>
-                <select class="form-control" name="cylinder_id" id="cylinder" required>
-                    <option value="">Select Cylinder</option>
-                    @foreach($cylinders as $cylinder)
-                        @if(old("cylinder_id"))
-                            <option value="{{$cylinder->id}}" {{ (old("cylinder_id") == $cylinder->id ? "selected":"") }}>{{$cylinder->name}}</option>
+                <label for="engine_type_id">Engine Type</label>
+                <select class="form-control" name="engine_type_id" id="engine_type_id" required>
+                    <option value="">Select Engine Type</option>
+                    @foreach($engineTypes as $engineType)
+                        @if(old("engine_type_id"))
+                            <option value="{{$engineType->id}}" {{ (old("engine_type_id") == $engineType->id ? "selected":"") }}>{{$engineType->name}}</option>
                         @else
-                            <option value="{{$cylinder->id}}" {{ ( $motorcycle->cylinder_id == $cylinder->id ? "selected":"") }}>{{$cylinder->name}}</option>
+                            <option value="{{$engineType->id}}" {{ ( $motorcycle->engine_type_id == $engineType->id ? "selected":"") }}>{{$engineType->name}}</option>
                         @endif
                     @endforeach
                 </select>
@@ -112,7 +112,6 @@
                     </button>
                     <img width='200' height='150' class='rounded p-2' src="{{ asset($image->url) }}">
                 </div>
-                   
                 @endforeach
             </div>
 

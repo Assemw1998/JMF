@@ -28,13 +28,13 @@ Route::group(['namespace' => 'App\Http\Controllers\super_admin','as'=>'super-adm
         Route::post('motorcycles-delete', 'dashboard\MotorcyclesController@delete')->name('motorcycles-delete');
         
         //make
-        Route::get('make-index', 'dashboard\MakeController@index')->name('make-index');
-        Route::get('make-create-view', 'dashboard\MakeController@viewCreate')->name('make-create-view');
-        Route::post('make-create', 'dashboard\MakeController@create')->name('make-create');
-        Route::get('make-view/{id}', 'dashboard\MakeController@view')->name('make-view');
-        Route::get('make-update-view/{id}', 'dashboard\MakeController@viewUpdate')->name('make-update-view');
-        Route::post('make-update/{id}', 'dashboard\MakeController@update')->name('make-update');
-        Route::post('make-delete', 'dashboard\MakeController@delete')->name('make-delete');
+        Route::get('brand-index', 'dashboard\BrandController@index')->name('brand-index');
+        Route::get('brand-create-view', 'dashboard\BrandController@viewCreate')->name('brand-create-view');
+        Route::post('brand-create', 'dashboard\BrandController@create')->name('brand-create');
+        Route::get('brand-view/{id}', 'dashboard\BrandController@view')->name('brand-view');
+        Route::get('brand-update-view/{id}', 'dashboard\BrandController@viewUpdate')->name('brand-update-view');
+        Route::post('brand-update/{id}', 'dashboard\BrandController@update')->name('brand-update');
+        Route::post('brand-delete', 'dashboard\BrandController@delete')->name('brand-delete');
 
         //model
         Route::get('model-index', 'dashboard\ModelController@index')->name('model-index');
@@ -46,13 +46,13 @@ Route::group(['namespace' => 'App\Http\Controllers\super_admin','as'=>'super-adm
         Route::post('model-delete', 'dashboard\ModelController@delete')->name('model-delete');
 
         //cylinder
-        Route::get('cylinder-index', 'dashboard\CylinderController@index')->name('cylinder-index');
-        Route::get('cylinder-create-view', 'dashboard\CylinderController@viewCreate')->name('cylinder-create-view');
-        Route::post('cylinder-create', 'dashboard\CylinderController@create')->name('cylinder-create');
-        Route::get('cylinder-view/{id}', 'dashboard\CylinderController@view')->name('cylinder-view');
-        Route::get('cylinder-update-view/{id}', 'dashboard\CylinderController@viewUpdate')->name('cylinder-update-view');
-        Route::post('cylinder-update/{id}', 'dashboard\CylinderController@update')->name('cylinder-update');
-        Route::post('cylinder-delete', 'dashboard\CylinderController@delete')->name('cylinder-delete');
+        Route::get('engineType-index', 'dashboard\EngineTypeController@index')->name('engineType-index');
+        Route::get('engineType-create-view', 'dashboard\EngineTypeController@viewCreate')->name('engineType-create-view');
+        Route::post('engineType-create', 'dashboard\EngineTypeController@create')->name('engineType-create');
+        Route::get('engineType-view/{id}', 'dashboard\EngineTypeController@view')->name('engineType-view');
+        Route::get('engineType-update-view/{id}', 'dashboard\EngineTypeController@viewUpdate')->name('engineType-update-view');
+        Route::post('engineType-update/{id}', 'dashboard\EngineTypeController@update')->name('engineType-update');
+        Route::post('engineType-delete', 'dashboard\EngineTypeController@delete')->name('engineType-delete');
 
          //color
          Route::get('color-index', 'dashboard\ColorController@index')->name('color-index');
@@ -62,6 +62,27 @@ Route::group(['namespace' => 'App\Http\Controllers\super_admin','as'=>'super-adm
          Route::get('color-update-view/{id}', 'dashboard\ColorController@viewUpdate')->name('color-update-view');
          Route::post('color-update/{id}', 'dashboard\ColorController@update')->name('color-update');
          Route::post('color-delete', 'dashboard\ColorController@delete')->name('color-delete');
+
+         //city
+         Route::get('city-index', 'dashboard\CityController@index')->name('city-index');
+         Route::get('city-create-view', 'dashboard\CityController@viewCreate')->name('city-create-view');
+         Route::post('city-create', 'dashboard\CityController@create')->name('city-create');
+         Route::get('city-view/{id}', 'dashboard\CityController@view')->name('city-view');
+         Route::get('city-update-view/{id}', 'dashboard\CityController@viewUpdate')->name('city-update-view');
+         Route::post('city-update/{id}', 'dashboard\CityController@update')->name('city-update');
+         Route::post('city-delete', 'dashboard\CityController@delete')->name('city-delete');
+
+         //customer
+         Route::get('customer-index', 'dashboard\CustomerController@index')->name('customer-index');
+         Route::get('customer-create-view', 'dashboard\CustomerController@viewCreate')->name('customer-create-view');
+         Route::post('customer-create', 'dashboard\CustomerController@create')->name('customer-create');
+         Route::get('customer-view/{id}', 'dashboard\CustomerController@view')->name('customer-view');
+         Route::get('customer-update-view/{id}', 'dashboard\CustomerController@viewUpdate')->name('customer-update-view');
+         Route::post('customer-update/{id}', 'dashboard\CustomerController@update')->name('customer-update');
+         Route::post('customer-delete', 'dashboard\CustomerController@delete')->name('customer-delete');
+         Route::post('customer-delete-image', 'dashboard\CustomerController@deleteImage')->name('customer-delete-image');
+         Route::get('customer-activate-deactivate', 'dashboard\CustomerController@activateDeactivate')->name('customer-activate-deactivate');
+         
     });
 
 });

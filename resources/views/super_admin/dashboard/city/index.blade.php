@@ -15,15 +15,14 @@
     <!-- /.content-header -->
     <section class="mt-3 content text-dark center">
         <div class="row col-12 text-right mb-4">
-            <a href="{{ route('super-admin.dashboard.model-create-view')}}" class="btn btn-outline-primary">Add New Model</a>
+            <a href="{{ route('super-admin.dashboard.city-create-view')}}" class="btn btn-outline-primary">Add New City</a>
         </div>
         <div class="row col-12 text-center">
-            <table id="model_table" class="display">
+            <table id="city_table" class="display">
                 <thead>
                     <tr>
                         <th>#</th>
                         <th>Name</th>
-                        <th>Brand</th>
                         <th>Created By</th>
                         <th>Updated By</th>
                         <th>Created At</th>
@@ -32,17 +31,16 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($models as $model)
+                    @foreach($cities as $city)
                         <tr>
-                            <td>{{$model->id}}</td>
-                            <td>{{$model->name}}</td>
-                            <td>{{$model->brand->name}}</td>
-                            <td>{{$model->superAdminCreatedBy->full_name}}</td>
-                            <td>{{$model->superAdminUpdatedBy->full_name}}</td>
-                            <td>{{$model->created_at}}</td>
-                            <td>{{$model->updated_at}}</td>
+                            <td>{{$city->id}}</td>
+                            <td>{{$city->name}}</td>
+                            <td>{{$city->superAdminCreatedBy->full_name}}</td>
+                            <td>{{$city->superAdminUpdatedBy->full_name}}</td>
+                            <td>{{$city->created_at}}</td>
+                            <td>{{$city->updated_at}}</td>
                             <td>
-                                <a href="{{ route('super-admin.dashboard.model-view',['id' => $model->id])}}" class="btn btn-outline-info  view d-block m-2" data-id=""><i class="fa fa-eye"></i></a>    
+                                <a href="{{ route('super-admin.dashboard.city-view',['id' => $city->id])}}" class="btn btn-outline-info  view d-block m-2" data-id=""><i class="fa fa-eye"></i></a>    
                             </td>
                         </tr>
                     @endforeach
@@ -52,7 +50,6 @@
                     <tr>
                         <th>#</th>
                         <th>Name</th>
-                        <th>Brand</th>
                         <th>Created By</th>
                         <th>Updated By</th>
                         <th>Created At</th>
@@ -64,5 +61,5 @@
         </div>
     </section>
 </div>
-<script type="text/javascript" src={{asset("custom/super_admin/js/model.js")}}></script>
+<script type="text/javascript" src={{asset("custom/super_admin/js/city.js")}}></script>
 @endsection

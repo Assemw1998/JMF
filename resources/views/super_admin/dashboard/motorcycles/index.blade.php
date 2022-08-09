@@ -22,11 +22,11 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Make</th>
+                        <th>Brand</th>
                         <th>Model</th>
                         <th>Chassis Number</th>
                         <th>Year</th>
-                        <th>Cylinder</th>
+                        <th>Engine Type</th>
                         <th>Engine Serial Number</th>
                         <th>Color</th>
                         <th>Extra Information</th>
@@ -41,14 +41,14 @@
                     @foreach($motorcycles as $motorcycle)
                         <tr>
                             <td>{{$motorcycle->id}}</td>
-                            <td>{{$motorcycle->make->name}}</td>
+                            <td>{{$motorcycle->brand->name}}</td>
                             <td>{{$motorcycle->model->name}}</td>
                             <td>{{$motorcycle->chassis}}</td>
                             <td>{{$motorcycle->year}}</td>
-                            <td>{{$motorcycle->cylinder->name}}</td>
+                            <td>{{$motorcycle->engineType->name}}</td>
                             <td>{{$motorcycle->engine_serial_number}}</td>
                             <td>{{$motorcycle->color->name}}</td>
-                            <td>{{$motorcycle->extra_information}}</td>
+                            <td>{{substr($motorcycle->extra_information, 0, 20)."...";}}</td>
                             <td>{{$motorcycle->superAdminCreatedBy->full_name}}</td>
                             <td>{{$motorcycle->superAdminUpdatedBy->full_name}}</td>
                             <td>{{$motorcycle->created_at}}</td>
@@ -63,11 +63,11 @@
                 <tfoot>
                     <tr>
                         <th>#</th>
-                        <th>Make</th>
+                        <th>Brand</th>
                         <th>Model</th>
                         <th>Chassis Number</th>
                         <th>Year</th>
-                        <th>Cylinder</th>
+                        <th>Engine Type</th>
                         <th>Engine Serial Number</th>
                         <th>Color</th>
                         <th>Extra Information</th>

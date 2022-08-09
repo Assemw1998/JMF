@@ -19,6 +19,15 @@
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item">
+                    <a href="{{ route('super-admin.dashboard.customer-index')}}" class="nav-link">
+                        <i class="nav-icon fa fa-users"></i>
+                        <p>
+                            Customers
+                        </p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
                     <a href="{{ route('super-admin.dashboard.motorcycles-index')}}" class="nav-link">
                         <i class="nav-icon fa fa-motorcycle"></i>
                         <p>
@@ -37,9 +46,9 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ route('super-admin.dashboard.make-index')}}"  class="nav-link">
+                            <a href="{{ route('super-admin.dashboard.brand-index')}}"  class="nav-link">
                                 <i class="far fa fa-ellipsis-h"></i>
-                                <p>Make</p>
+                                <p>Brand</p>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -49,15 +58,19 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('super-admin.dashboard.cylinder-index')}}"  class="nav-link">
+                            <a href="{{ route('super-admin.dashboard.engineType-index')}}"  class="nav-link">
                                 <i class="far fa fa-ellipsis-h"></i>
-                                <p>Cylinder</p>
+                                <p>Engine Type</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('super-admin.dashboard.color-index')}}"  class="nav-link">
                                 <i class="far fa fa-ellipsis-h"></i>
                                 <p>Color</p>
+                            </a>
+                            <a href="{{ route('super-admin.dashboard.city-index')}}"  class="nav-link">
+                                <i class="far fa fa-ellipsis-h"></i>
+                                <p>City</p>
                             </a>
                         </li>
                     </ul>

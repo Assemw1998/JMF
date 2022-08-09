@@ -20,17 +20,17 @@
         <form action="{{ route('super-admin.dashboard.motorcycles-create')}}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
-                <label for="make">Make</label>
-                <select class="form-control" name="make_id" id="make" required>
-                    <option value="">Select Make</option>
-                    @foreach($makes as $make)
-                        <option value="{{$make->id}}" {{ (old("make_id") == $make->id ? "selected":"") }}>{{$make->name}}</option>
+                <label for="brand_id">Brand</label>
+                <select class="form-control" name="brand_id" id="brand_id" required>
+                    <option value="">Select Brand</option>
+                    @foreach($brands as $brand)
+                        <option value="{{$brand->id}}" {{ (old("brand_id") == $brand->id ? "selected":"") }}>{{$brand->name}}</option>
                     @endforeach
                 </select>
             </div>
             <div class="form-group">
-                <label for="model">Model</label>
-                <select class="form-control" name="model_id" id="make" required>
+                <label for="model_id">Model</label>
+                <select class="form-control" name="model_id" id="model_id" required>
                     <option value="">Select Model</option>
                     @foreach($models as $model)
                         <option value="{{$model->id}}" {{ (old("model_id") == $model->id ? "selected":"") }} >{{$model->name}}</option>
@@ -50,11 +50,11 @@
             </div>
 
             <div class="form-group">
-                <label for="model">Cylinder</label>
-                <select class="form-control" name="cylinder_id" id="cylinder" required>
-                    <option value="">Select Cylinder</option>
-                    @foreach($cylinders as $cylinder)
-                    <option value="{{$cylinder->id}}" {{ (old("cylinder_id") == $cylinder->id ? "selected":"") }}>{{$cylinder->name}}</option>
+                <label for="engineType">Engine Type</label>
+                <select class="form-control" name="engine_type_id" id="engine_type_id" required>
+                    <option value="">Select Engine Type</option>
+                    @foreach($engineTypes as $engineType)
+                    <option value="{{$engineType->id}}" {{ (old("engine_type_id") == $engineType->id ? "selected":"") }}>{{$engineType->name}}</option>
                     @endforeach
                 </select>
             </div>

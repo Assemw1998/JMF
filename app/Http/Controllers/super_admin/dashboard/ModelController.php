@@ -5,7 +5,7 @@ namespace App\Http\Controllers\super_admin\dashboard;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Model;
-
+use App\Models\Brand;
 
 class ModelController extends Controller
 {
@@ -16,7 +16,8 @@ class ModelController extends Controller
     }
     public function viewCreate()
     {
-        return view('super_admin.dashboard.model.create');
+        $brands = Brand::all();
+        return view('super_admin.dashboard.model.create',['brands' => $brands]);
     }
 
     public function create(Request $request)
@@ -26,6 +27,7 @@ class ModelController extends Controller
         ]);
         $model = new Model;
         $model->name = $request->name;
+        $model->brand_id = $request->brand_id;
   
 
         if ($model->save()) {
@@ -41,7 +43,8 @@ class ModelController extends Controller
     public function viewUpdate($id)
     {
         $model = Model::find($id);
-        return view('super_admin.dashboard.model.update', ['model' => $model]);
+        $brands = Brand::all();
+        return view('super_admin.dashboard.model.update', ['model' => $model, 'brands' => $brands]);
     }
 
 

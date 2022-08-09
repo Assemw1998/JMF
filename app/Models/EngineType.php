@@ -3,17 +3,11 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model as ModelLaravel;
+use Illuminate\Database\Eloquent\Model;
 
-class Model extends ModelLaravel
+class EngineType extends Model
 {
     use HasFactory;
-
-    public function brand()
-    {
-        return $this->belongsTo(Brand::class);
-    }
-
     public function superAdminCreatedBy()
     {
         return $this->belongsTo(SuperAdmin::class, 'created_by_id');
@@ -28,30 +22,29 @@ class Model extends ModelLaravel
     {
         parent::boot();
 
-        self::creating(function ($model) {
-            $model->created_by_id = auth()->user()->id;
-            $model->updated_by_id = auth()->user()->id;
+        self::creating(function ($cylinder) {
+            $cylinder->created_by_id = auth()->user()->id;
+            $cylinder->updated_by_id = auth()->user()->id;
         });
 
-        self::created(function ($model) {
+        self::created(function ($cylinder) {
             // ... code here
         });
 
-        self::updating(function ($model) {
-            $model->updated_by_id = auth()->user()->id;
+        self::updating(function ($cylinder) {
+            $cylinder->updated_by_id = auth()->user()->id;
         });
 
-        self::updated(function ($model) {
+        self::updated(function ($cylinder) {
             // ... code here
         });
 
-        self::deleting(function ($model) {
+        self::deleting(function ($cylinder) {
             // ... code here
         });
 
-        self::deleted(function ($model) {
+        self::deleted(function ($cylinder) {
             // ... code here
         });
     }
-
 }

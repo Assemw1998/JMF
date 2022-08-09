@@ -9,9 +9,9 @@ class Motorcycle extends ModelLaravel
 {
     use HasFactory;
 
-    public function make()
+    public function brand()
     {
-        return $this->belongsTo(Make::class);
+        return $this->belongsTo(Brand::class);
     }
 
     public function model()
@@ -24,9 +24,9 @@ class Motorcycle extends ModelLaravel
         return $this->belongsTo(Color::class);
     }
 
-    public function cylinder()
+    public function engineType()
     {
-        return $this->belongsTo(Cylinder::class);
+        return $this->belongsTo(EngineType::class);
     }
 
     public function superAdminCreatedBy()

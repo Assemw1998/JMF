@@ -5,10 +5,10 @@ namespace App\Http\Controllers\super_admin\dashboard;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Motorcycle;
-use App\Models\Make;
+use App\Models\Brand;
 use App\Models\Model;
 use App\Models\Color;
-use App\Models\Cylinder;
+use App\Models\EngineType;
 use App\Models\MotorcycleImage;
 use DB;
 
@@ -21,12 +21,12 @@ class MotorcyclesController extends Controller
     }
     public function viewCreate()
     {
-        $makes = Make::all();
+        $brands = Brand::all();
         $models = Model::all();
         $colors = Color::all();
-        $cylinders = Cylinder::all();
+        $engineTypes = EngineType::all();
 
-        return view('super_admin.dashboard.motorcycles.create', ['makes' => $makes, 'models' => $models, 'colors' => $colors, 'cylinders' => $cylinders]);
+        return view('super_admin.dashboard.motorcycles.create', ['brands' => $brands, 'models' => $models, 'colors' => $colors, 'engineTypes' => $engineTypes]);
     }
 
     public function create(Request $request)
@@ -41,7 +41,7 @@ class MotorcyclesController extends Controller
         $motorcycle->model_id = $request->model_id;
         $motorcycle->year = $request->year;
         $motorcycle->chassis = $request->chassis;
-        $motorcycle->cylinder_id = $request->cylinder_id;
+        $motorcycle->engine_type_id = $request->engine_type_id;
         $motorcycle->color_id = $request->color_id;
         $motorcycle->engine_serial_number = $request->engine_serial_number;
         $motorcycle->extra_information = $request->extra_information;
@@ -66,11 +66,11 @@ class MotorcyclesController extends Controller
     public function viewUpdate($id)
     {
         $motorcycle = Motorcycle::find($id);
-        $makes = Make::all();
+        $brands = Brand::all();
         $models = Model::all();
         $colors = Color::all();
-        $cylinders = Cylinder::all();
-        return view('super_admin.dashboard.motorcycles.update', ['motorcycle' => $motorcycle, 'makes' => $makes, 'models' => $models, 'colors' => $colors, 'cylinders' => $cylinders]);
+        $engineTypes = Enginetype::all();
+        return view('super_admin.dashboard.motorcycles.update', ['motorcycle' => $motorcycle, 'brands' => $brands, 'models' => $models, 'colors' => $colors, 'engineTypes' => $engineTypes]);
     }
 
 
@@ -91,11 +91,11 @@ class MotorcyclesController extends Controller
         ]);
 
         $motorcycle = Motorcycle::find($id);
-        $motorcycle->make_id = $request->make_id;
+        $motorcycle->brand_id = $request->brand_id;
         $motorcycle->model_id = $request->model_id;
         $motorcycle->year = $request->year;
         $motorcycle->chassis = $request->chassis;
-        $motorcycle->cylinder_id = $request->cylinder_id;
+        $motorcycle->engine_type_id = $request->engine_type_id;
         $motorcycle->color_id = $request->color_id;
         $motorcycle->engine_serial_number = $request->engine_serial_number;
         $motorcycle->extra_information = $request->extra_information;

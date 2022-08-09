@@ -24,8 +24,8 @@
         <ul class="list-group list-group-flush">
             <li class="list-group-item">
                 <div class="form-group">
-                    <label>Make</label>
-                    <div>{{$motorcycle->make->name}}</div>
+                    <label>Brand</label>
+                    <div>{{$motorcycle->brand->name}}</div>
                 </div>
             </li>
             <li class="list-group-item">
@@ -48,8 +48,8 @@
             </li>
             <li class="list-group-item">
                 <div class="form-group">
-                    <label>Cylinder</label>
-                    <div>{{$motorcycle->cylinder->name}}</div>
+                    <label>Engine Type</label>
+                    <div>{{$motorcycle->engineType->name}}</div>
                 </div>
             </li>
             <li class="list-group-item">
